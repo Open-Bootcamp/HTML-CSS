@@ -1,0 +1,59 @@
+.btn, .btn-2 {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  color: #2b2b2b;
+}
+.btn:hover, .btn-2:hover {
+  background-color: cyan;
+  color: red;
+  cursor: pointer;
+}
+
+.btn-2 {
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  background-color: blanchedalmond;
+  min-height: 100vh;
+  padding: 0.5rem;
+}
+
+h1 {
+  margin: 0;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  width: 50rem;
+  background-color: #f1f1f1;
+}
+
+p {
+  color: #2b2b2b;
+  text-transform: uppercase;
+  width: 50rem;
+  background-color: #666666;
+}
+
+.listado {
+  width: 10rem;
+  background-color: aquamarine;
+  padding: 0.5rem;
+}
+.listado ul {
+  margin: 0 0.5rem;
+}
+.listado ul li {
+  list-style: none;
+}
+.listado ul li:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */

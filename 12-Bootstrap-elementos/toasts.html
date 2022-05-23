@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toasts</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container py-4">
+      <button class="btn btn-primary" id="boton-trigger">
+        Muestra el toast
+      </button>
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="bs" />
+            <strong class="me-auto">Título</strong>
+            <small>Hace 4 minutos</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Esto es el mensaje</div>
+        </div>
+      </div>
+      <div
+        class="toast-container d-flex align-items-center justify-content-center"
+      >
+        <div class="toast show">
+          <div class="toast-header">Título del primer toast</div>
+          <div class="toast-body">Mensaje</div>
+        </div>
+        <div class="toast show">
+          <div class="toast-header">Título del segundo</div>
+          <div class="toast-body">Mensaje</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    var toastTrigger = document.getElementById("boton-trigger");
+    var toastLiveExample = document.getElementById("liveToast");
+    if (toastTrigger) {
+      toastTrigger.addEventListener("click", function () {
+        var toast = new bootstrap.Toast(toastLiveExample);
+
+        toast.show();
+      });
+    }
+  </script>
+</html>
